@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de dibujos</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Catálogo de dibujos</h1>
+
+        <!-- Selector de categoría -->
+        <div class="selector">
+            <input type="radio" id="caricaturas" name="categoria" checked>
+            <label for="caricaturas">Caricaturas</label>
+
+            <input type="radio" id="paisajes" name="categoria">
+            <label for="paisajes">Paisajes</label>
+
+            <input type="radio" id="anime" name="categoria">
+            <label for="anime">Animé</label>
+        </div>
+
+        <!-- Galerías -->
+        <section class="galeria caricaturas">
+            <img src="imagenes/caricaturas/caricatura1.png" alt="Caricatura 1">
+            <img src="imagenes/caricaturas/caricatura2.png" alt="Caricatura 2">
+        </section>
+
+        <section class="galeria paisajes">
+            <img src="imagenes/paisajes/paisaje1.png" alt="Paisaje 1">
+            <img src="imagenes/paisajes/paisaje2.png" alt="Paisaje 2">
+        </section>
+
+        <section class="galeria anime">
+            <img src="imagenes/anime/anime1.png" alt="Animé 1">
+            <img src="imagenes/anime/anime2.png" alt="Animé 2">
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Sitio de dibujos personales</p>
+    </footer>
+</body>
+</html>

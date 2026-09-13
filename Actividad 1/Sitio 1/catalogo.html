@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuaderno Abierto — Catálogo</title>
+  <meta name="description" content="Catálogo de dibujos organizado en caricaturas, paisajes y animé.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="envoltorio">
+      <a class="marca" href="index.html">Cuaderno<span>Abierto</span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a href="acerca.html">Acerca de mí</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="envoltorio">
+    <section class="seccion">
+      <h2>Catálogo de dibujos</h2>
+      <p class="entradilla">
+        Elegí una categoría para ver los dibujos correspondientes. El cambio
+        de categoría es completamente estático: no hay ningún script
+        ejecutándose, solo botones de opción (radio) ocultos y selectores CSS.
+      </p>
+
+      <!--
+        MECANISMO DE SELECCIÓN SIN JAVASCRIPT
+        ---------------------------------------------------------------
+        1. Tres <input type="radio"> comparten el mismo "name", por lo
+           que el navegador solo permite tener uno marcado a la vez
+           (comportamiento nativo de HTML, sin scripts).
+        2. Cada radio tiene un <label for="..."> asociado, que funciona
+           como pestaña clickeable: al tocar el texto se marca el radio.
+        3. Los tres bloques de galería (uno por categoría) son HERMANOS
+           de los radios dentro del mismo contenedor .selector-categoria.
+        4. En estilosIA.css usamos la regla:
+              #cat-x:checked ~ #galeria-x { display: grid; }
+           El combinador "~" selecciona un elemento hermano posterior
+           SOLO cuando la condición ":checked" se cumple. Así, cada
+           galería aparece únicamente si su radio está marcado, y las
+           otras dos permanecen con "display: none".
+        5. La misma técnica resalta la pestaña activa (label en negro).
+      -->
+      <div class="selector-categoria">
+
+        <!-- Radios ocultos que controlan qué galería se muestra -->
+        <input type="radio" name="categoria" id="cat-caricaturas" checked>
+        <input type="radio" name="categoria" id="cat-paisajes">
+        <input type="radio" name="categoria" id="cat-anime">
+
+        <!-- Pestañas visibles: cada label activa su radio asociado -->
+        <div class="pestanas" role="tablist" aria-label="Categorías de dibujos">
+          <label for="cat-caricaturas">Caricaturas</label>
+          <label for="cat-paisajes">Paisajes</label>
+          <label for="cat-anime">Animé</label>
+        </div>
+
+        <!-- Galería: Caricaturas -->
+        <div id="galeria-caricaturas" class="galeria">
+          <figure class="marco-dibujo">
+            <img src="../imagenes/caricaturas/dinero.jpg" alt="Caricatura de un rostro sonriente con ojos grandes, tonos cálidos">
+            <figcaption>Caricatura 01</figcaption>
+          </figure>
+          <figure class="marco-dibujo">
+            <img src="../imagenes/caricaturas/escuela.jpg" alt="Caricatura de un rostro sonriente con ojos grandes, tonos fríos">
+            <figcaption>Caricatura 02</figcaption>
+          </figure>
+        </div>
+
+        <!-- Galería: Paisajes -->
+        <div id="galeria-paisajes" class="galeria">
+          <figure class="marco-dibujo">
+            <img src="../imagenes/paisajes/meridiano.png" alt="Paisaje diurno con montañas, colinas verdes y sol amarillo">
+            <figcaption>Paisaje 01</figcaption>
+          </figure>
+          <figure class="marco-dibujo">
+            <img src="../imagenes/paisajes/plaza.jpg" alt="Paisaje de atardecer con montañas moradas y colinas oscuras">
+            <figcaption>Paisaje 02</figcaption>
+          </figure>
+        </div>
+
+        <!-- Galería: Animé -->
+        <div id="galeria-anime" class="galeria">
+          <figure class="marco-dibujo">
+            <img src="../imagenes/anime/espejo.jpg" alt="Dibujo estilo animé de un ojo violeta con pestañas marcadas">
+            <figcaption>Animé 01</figcaption>
+          </figure>
+          <figure class="marco-dibujo">
+            <img src="../imagenes/anime/lluvia.jpg" alt="Dibujo estilo animé de un ojo azul con fondo rosado">
+            <figcaption>Animé 02</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="envoltorio">
+      <p>Sitio estático hecho con HTML y CSS · sin JavaScript.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

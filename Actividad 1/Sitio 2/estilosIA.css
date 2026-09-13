@@ -1,0 +1,87 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Selector de categorías */
+.selector {
+    text-align: center;
+    margin: 20px;
+}
+
+.selector input[type="radio"] {
+    display: none;
+}
+
+.selector label {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.selector input[type="radio"]:checked + label {
+    background-color: #333;
+    color: white;
+}
+
+/* Galerías */
+.galeria {
+    display: none;
+    text-align: center;
+}
+
+.galeria img {
+    border: 3px solid #333;
+    padding: 10px;
+    margin: 10px;
+    max-width: 90%;
+    height: auto;
+}
+
+/* Mostrar según categoría seleccionada */
+#caricaturas:checked ~ .caricaturas {
+    display: block;
+}
+
+#paisajes:checked ~ .paisajes {
+    display: block;
+}
+
+#anime:checked ~ .anime {
+    display: block;
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+    .galeria img {
+        max-width: 40%;
+    }
+}

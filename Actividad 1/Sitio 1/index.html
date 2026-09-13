@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuaderno Abierto — Inicio</title>
+  <meta name="description" content="Portfolio personal de dibujos: caricaturas, paisajes y animé.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="envoltorio">
+      <a class="marca" href="index.html">Cuaderno<span>Abierto</span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-principal">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="acerca.html">Acerca de mí</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="envoltorio">
+
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Dibujos hechos a mano, publicados a mano.</h1>
+        <p>
+          Este es mi cuaderno digital: un rincón sencillo donde comparto
+          caricaturas, paisajes y dibujos estilo animé. Todo el sitio está
+          construido solo con HTML y CSS, sin ninguna línea de JavaScript.
+        </p>
+        <a class="boton" href="catalogo.html">Ver el catálogo</a>
+      </div>
+      <div class="hero-imagen">
+        <figure class="marco-dibujo">
+          <img src="../imagenes/anime/espejo.jpg" alt="Dibujo destacado estilo animé, un ojo grande con reflejos de luz">
+          <figcaption>Dibujo destacado</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <h2>Tres mundos, un mismo trazo</h2>
+      <p class="entradilla">
+        Cada categoría vive en el catálogo, donde podés cambiar de una a otra
+        sin recargar la página, usando únicamente botones de opción (radio
+        buttons) y selectores CSS.
+      </p>
+      <div class="galeria" style="display:flex;">
+        <figure class="marco-dibujo">
+          <img src="../imagenes/caricaturas/dinero.jpg" alt="Caricatura de un rostro sonriente con rasgos exagerados">
+          <figcaption>Caricaturas</figcaption>
+        </figure>
+        <figure class="marco-dibujo">
+          <img src="../imagenes/paisajes/meridiano.png" alt="Paisaje con montañas, colinas verdes y sol">
+          <figcaption>Paisajes</figcaption>
+        </figure>
+        <figure class="marco-dibujo">
+          <img src="../imagenes/anime/lluvia.jpg" alt="Dibujo estilo animé de un ojo azul con brillos">
+          <figcaption>Animé</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="envoltorio">
+      <p>Sitio estático hecho con HTML y CSS · sin JavaScript.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
